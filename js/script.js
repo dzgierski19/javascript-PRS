@@ -1,12 +1,12 @@
-{    function playGame(playerInput) {
+{    const playGame = function playGame(playerInput) {
 
         clearMessages();
 
-        let randomNumber = Math.floor(Math.random() *3 + 1)
+        const randomNumber = Math.floor(Math.random() *3 + 1)
 
         console.log('Wylosowana liczba to: ' + randomNumber)
 
-        function getMoveName(argMoveId){
+        const getMoveName = function getMoveName(argMoveId){
             if(argMoveId == 1){
                 return 'kamień';
             }else if (argMoveId == 2){
@@ -31,7 +31,7 @@
 
         printMessage('Twój ruch to: ' + argPlayerMove)
 
-        displayResult = function displayResult(argComputerMove, argPlayerMove){
+        const displayResult = function displayResult(argComputerMove, argPlayerMove){
             printMessage ('Zagrałem ' + argComputerMove + ', a Ty ' + argPlayerMove)
             
             if(argComputerMove == 'kamień' && argPlayerMove == 'papier'){
